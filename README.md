@@ -1,4 +1,4 @@
-# Course Setup for EE1101
+# Device Setup for EE1101
 This is intended to help you setup your devices for the course.
 
 You will need additionally 
@@ -107,6 +107,7 @@ Both dual boot and WSL will work fine, though sir prefers dual boot. So it's you
 Imagine having spent so much money, to spend more money.
 
 Apple users during GVV sir's course be like 
+
 ![fig](Figures/wipe%20tears%20money.jpg)
 
 You only really have two options.
@@ -114,3 +115,71 @@ You only really have two options.
 2. Buy a Raspberry Pi and run Lineage OS on it. (Lineage OS is like Android without officialy supported Google apps) 
 
 Sane people generally choose the First option. The second option is all you if you decide to go for it. 
+
+
+
+# Online Assignments : A Guide to $\text{\LaTeX{}}$
+
+LaTeX is a tool specifically designed to create professional-looking documents, like a fancier version of Microsoft Word. Here's the key difference:
+
+In Word, what you see is what you get. You type and format directly on the screen.
+
+LaTeX works differently. You write your text and instructions for formatting in a plain text file. You tell LaTeX what you want (headings, bold text, equations), and it takes care of the fancy typesetting.
+
+LaTeX is particularly powerful for technical documents like research papers or scientific reports.
+
+It excels at handling:
+
+* Complex mathematical equations: LaTeX can write intricate equations neatly and accurately, a challenge for regular word processors.
+* Consistent formatting: Once you define a style (font, spacing), LaTeX applies it throughout the document, ensuring a polished look.
+* Automatic elements: LaTeX can generate numbered references, tables of contents, and bibliographies, saving you time and effort.
+
+Here are a few examples.
+1. A document with some text on it
+```latex
+\documentclass{article}
+\begin{document}
+First document. This is a simple example, with no 
+extra parameters or packages included.
+\end{document}
+```
+![Example1](Figures/Basic%20Example.png)
+
+2. A document with a title, author and some text
+
+```latex
+\documentclass[12pt, letterpaper]{article}
+\title{First full document}
+\author{Mihir Divyansh}
+\date{\today}
+\begin{document}
+\maketitle
+We have now added a title, author and date to our first \LaTeX{} document
+\end{document}
+```
+
+![Example2](Figures/Example%202.png)
+
+You are given a template by sir for your assignments. 
+You can look at the files [here](LaTeX)
+
+Your main 'tex' document should look like the example given [here](LaTeX/Example%20Assignment/main.tex)
+
+## A few $\LaTeX{}$ commands
+* $\text{\textbf{Commenting text}}$
+```latex
+% Adding a '%' symbol before some text "comments out" the text. 
+```
+
+Commenting text implies that you are telling the compiler to ignore that particular line.
+
+* $\text{\textbf{Adding Figures}}$
+
+```latex
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\columnwidth]{relative_path-to-file}
+    \caption{Caption}
+    \label{fig:Label_name}
+\end{figure}
+```
