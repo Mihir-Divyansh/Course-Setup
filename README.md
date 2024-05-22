@@ -118,7 +118,7 @@ Sane people generally choose the First option. The second option is all you if y
 
 
 
-# Online Assignments : A Guide to $\text{\LaTeX{}}$
+# Online Assignments : A Guide to LaTeX
 
 LaTeX is a tool specifically designed to create professional-looking documents, like a fancier version of Microsoft Word. Here's the key difference:
 
