@@ -76,11 +76,25 @@ You will need additionally
 3. Installing neovim and ranger
 
     ```bash
-    apt install neovim ranger libxtst-dev libx11-dev python3-pynvim
+      apt install neovim ranger libxtst-dev libx11-dev python3-pynvim
     ```
+    To set up neovim, follow the below
 
-
-4. Installing LaTeX
+      Installing Vim Plug
+      ```bash 
+        curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        curl -fLo ~/.config/nvim/init.vim --create-dirs https://raw.githubusercontent.com/gadepall/termux/main/neovim/init.vim
+      ```
+      To enter the plugin,
+      ```bash
+        nvim ~/.config/nvim/init.vim
+      ```
+      And inside nvim, run
+      ```sh
+        :PlugInstall
+        :qa!
+      ```
+5. Installing LaTeX
 
    ```bash
    apt install texlive-full gnumeric
@@ -89,7 +103,7 @@ You will need additionally
 
 ### Dual Booting your laptop
 
-Ubuntu is an Operating System, much like Windows is an OS. But it differs from Windows in many ways. Programming is much better in Ubuntu and all other Linux distributions, when compared to Windows. Here is a [link](https://www.onlogic.com/blog/how-to-dual-boot-windows-11-and-linux/) to help you dual boot your laptop*.
+$/textbf{Ubuntu}$ is an Operating System, much like Windows is an OS. But it differs from Windows in many ways. Programming is much better in Ubuntu and all other Linux distributions, when compared to Windows. Here is a [link](https://www.onlogic.com/blog/how-to-dual-boot-windows-11-and-linux/) to help you dual boot your laptop*.
 
 In our experience, we found Ubuntu to be the most hassle-free out of all the distros. Some others you can try before installing are
  * Parrot OS
@@ -98,10 +112,6 @@ In our experience, we found Ubuntu to be the most hassle-free out of all the dis
 
 <sup> *If you need any help, feel free to message a TA</sup>
 
-### Setting up WSL (Windows Subsystem for Linux)
-WSL lets you install a Linux operating system (like Ubuntu) directly on your Windows machine. Lets you use the Command Line Power of Linux inside of Windows. Here is a [link](https://www.geeksforgeeks.org/how-to-install-wsl2-windows-subsystem-for-linux-2-on-windows-10/) to get you started.
-
-Both dual boot and WSL will work fine, though sir prefers dual boot. So it's your pick.
 
 ## If you have all Apple devices
 Imagine having spent so much money, to spend more money.
@@ -110,15 +120,23 @@ Apple users during GVV sir's course be like
 
 ![fig](Figures/wipe%20tears%20money.jpg)
 
-You only really have two options.
-1. Borrow someone's ANDROID phone before every class.
+You only really have two options. 
+1. Borrow someone's ANDROID phone / get one from home, if you have an old one lying around before every class.
 2. Buy a Raspberry Pi and run Lineage OS on it. (Lineage OS is like Android without officialy supported Google apps) 
 
 Sane people generally choose the First option. The second option is all you if you decide to go for it. 
 
 
+## Setting up your Accounts: GitHub
+* Go to [GitHub](github.com).
+* Click Sign Up and follow the on-screen instructions
+* Create a repository with the name: EE1030, and make it public
 
-# Online Assignments : A Guide to LaTeX
+* If this is your first time making a GitHub Repository, the website gives a list of commands you can run on command line, to set up your repository locally
+
+
+
+# Online Assignments: A Guide to LaTeX
 
 LaTeX is a tool specifically designed to create professional-looking documents, like a fancier version of Microsoft Word. Here's the key difference:
 
@@ -126,7 +144,7 @@ In Word, what you see is what you get. You type and format directly on the scree
 
 LaTeX works differently. You write your text and instructions for formatting in a plain text file. You tell LaTeX what you want (headings, bold text, equations), and it takes care of the fancy typesetting.
 
-LaTeX is particularly powerful for technical documents like research papers or scientific reports.
+LaTeX is particularly powerful for technical documents like research papers or scientific reports, which contain tons of math typing.
 
 It excels at handling:
 
@@ -164,6 +182,16 @@ You are given a template by sir for your assignments.
 You can look at the files [here](LaTeX)
 
 Your main 'tex' document should look like the example given [here](LaTeX/Example%20Assignment/main.tex)
+
+
+## LaTeX Basics
+To include mathematics in a document, you type the LaTeX source code for the math between dollar signs. For example, ```$ax^2+bx+c=0$``` will be typeset as $ax^2+bx+c=0$. If you enclose the code between double dollar signs, the math will be displayed on on line by itself. (This is called "displayed math.") For example, `$$ax^2+bx+c=0$$` will be typeset as $$ax^2+bx+c=0$$
+
+In the source code, certain characters have special meaning: `$ \ { } ^ _ & ~ # %`. We have seen that $ is used to surround math code.
+
+The backslash character, \, is used for LaTeX commands, and braces, { and }, are used to enclose the parameters to which a command applies. For example, in \sqrt{b^2-4ac}, the command is \sqrt, the parameter is b^2-4ac, and the typeset result is $\sqrt{b^2-4ac}$
+. The `\frac` command is used to make a fraction, and it has two parameters, so `\frac{n!}{k!(n-k)!}` is typeset as $\frac{n!}{k!(n-k)!}$
+. Some commands don't have parameters. For example, `\infty` represents the infinity ($\infty$) symbol, , and \to produces a right arrow ($\to$), . Note that you might need to leave a space after a command like \to to mark the end of the command word. For example, use `f\colon X\to Y` to get $f\colon X\to Y$. Typing `\colonX` instead of `\colon X` will just get you an error.
 
 ## A few $\LaTeX{}$ commands
 * $\text{\textbf{Commenting text}}$
