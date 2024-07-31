@@ -5,10 +5,10 @@ You will need additionally
 1. A Keyboard (Bluetooth / Wired)
 2. A stand for your phone (Not compulsory, but if you have one, it will be easier for you)
 
-## Recommended devices
+### Probable Devices you may have
 1. Any android phone/tablet
 2. Any windows laptop with enough storage for a dual boot.
-3. If you are Rich AF (Have all Apple Devices)
+3. None of the Above (All Apple Devices) : We'll come to you later
 
 ## Setting up an android device 
 
@@ -128,12 +128,25 @@ Sane people generally choose the First option. The second option is all you if y
 
 
 ## Setting up your Accounts: GitHub
-* Go to [GitHub](github.com).
 * Click Sign Up and follow the on-screen instructions
 * Create a repository with the name: EE1030, and make it public
 
 * If this is your first time making a GitHub Repository, the website gives a list of commands you can run on command line, to set up your repository locally
 
+### Maintaing a Local copy
+* Open Termux and Login
+* For good practice, create a folder for the course, and go to that folder with the following commands. 
+> 'cd' stands for change directory, and goes to the folder requested
+
+> 'mkdir' stands for make directory
+```sh
+    cd /sdcard
+    mkdir "Your Folder Name" && cd "Your Folder Name"
+```
+* Clone your repo: Replace the link below with your own
+```sh
+    git clone https://github.com/User-Name/EE1030.git
+```
 
 
 # Online Assignments: A Guide to LaTeX
@@ -193,21 +206,8 @@ The backslash character, \, is used for LaTeX commands, and braces, { and }, are
 . The `\frac` command is used to make a fraction, and it has two parameters, so `\frac{n!}{k!(n-k)!}` is typeset as $\frac{n!}{k!(n-k)!}$
 . Some commands don't have parameters. For example, `\infty` represents the infinity ($\infty$) symbol, , and \to produces a right arrow ($\to$), . Note that you might need to leave a space after a command like \to to mark the end of the command word. For example, use `f\colon X\to Y` to get $f\colon X\to Y$. Typing `\colonX` instead of `\colon X` will just get you an error.
 
-## A few $\LaTeX{}$ commands
-* $\text{\textbf{Commenting text}}$
-```latex
-% Adding a '%' symbol before some text "comments out" the text. 
-```
+The special characters caret, ^, and underscore, _, are used for exponents and subscripts in math mode. If there is more than one character in the subscript or superscript, use {} to enclose the characters
 
-Commenting text implies that you are telling the compiler to ignore that particular line.
+Some LaTeX code uses environments. Environments are coded using \begin and \end, which take the name of the environment as parameter.
+These are just a few things to get you started. Look at the example assignment, and experiment with different commands. Utilise Google and ChatGPT as much as possible to get hints .
 
-* $\text{\textbf{Adding Figures}}$
-
-```latex
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.75\columnwidth]{relative_path-to-file}
-    \caption{Caption}
-    \label{fig:Label_name}
-\end{figure}
-```
