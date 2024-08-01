@@ -211,3 +211,5 @@ The special characters caret, ^, and underscore, _, are used for exponents and s
 Some LaTeX code uses environments. Environments are coded using \begin and \end, which take the name of the environment as parameter.
 These are just a few things to get you started. Look at the example assignment, and experiment with different commands. Utilise Google and ChatGPT as much as possible to get hints .
 
+> Do not use (text) anywhere, instead, use \brak{text} to insert parenthesis.
+> For fractions, there are multiple options such as \frac{}, \bfrac{}, \dfrac{} and so on. Use only \frac{} unless instructed otherwise.
