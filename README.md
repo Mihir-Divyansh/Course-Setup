@@ -103,7 +103,7 @@ You will need additionally
 
 ### Dual Booting your laptop
 
-$/textbf{Ubuntu}$ is an Operating System, much like Windows is an OS. But it differs from Windows in many ways. Programming is much better in Ubuntu and all other Linux distributions, when compared to Windows. Here is a [link](https://www.onlogic.com/blog/how-to-dual-boot-windows-11-and-linux/) to help you dual boot your laptop*.
+Ubuntu is an Operating System, much like Windows is an OS. But it differs from Windows in many ways. Programming is much better in Ubuntu and all other Linux distributions, when compared to Windows. Here is a [link](https://www.onlogic.com/blog/how-to-dual-boot-windows-11-and-linux/) to help you dual boot your laptop*.
 
 In our experience, we found Ubuntu to be the most hassle-free out of all the distros. Some others you can try before installing are
  * Parrot OS
