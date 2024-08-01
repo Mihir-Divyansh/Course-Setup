@@ -1,4 +1,4 @@
-# Device Setup for EE1101
+# Device Setup for EE1030
 This is intended to help you setup your devices for the course.
 
 You will need additionally 
